@@ -7,14 +7,15 @@ special_chars = string.punctuation
 
 alphabet = letters + digits + special_chars
 
-pwd_length = 18
+print('Enter the password length')
+password_length = int(input())
 while True:
-    pwd = ''
-    for i in range(pwd_length):
-        pwd += ''.join(secrets.choice(alphabet))
+    password = ''
+    for i in range(password_length):
+        password += ''.join(secrets.choice(alphabet))
 
-    if (any(char in special_chars for char in pwd) and 
-        sum(char in digits for char in pwd)>2): 
+    if (any(char in special_chars for char in password) and 
+        sum(char in digits for char in password)>2): 
             break
 
-print(pwd)
+print(password)
