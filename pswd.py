@@ -15,7 +15,7 @@ while True:
         password += ''.join(secrets.choice(alphabet))
 
     if (any(char in special_chars for char in password) and 
-        sum(char in digits for char in password)>2): 
+        sum(char in digits for char in password)>4): 
             break
 
 print(password)
